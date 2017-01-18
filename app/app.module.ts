@@ -11,9 +11,8 @@ import { MovieListComponent } from './movieList/movieList.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'about', pathMatch: 'full' },
+    { path: 'about', loadChildren: 'app/about/about.module#AboutModule'},
     { path: 'list', loadChildren: 'app/movieList/movie.module#MovieModule' },
-    { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({
@@ -21,7 +20,7 @@ const routes: Routes = [
         BrowserModule,
         RouterModule.forRoot(routes),
     ],
-    declarations: [ AppComponent, HeaderComponent, AboutComponent ],
+    declarations: [ AppComponent, HeaderComponent ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }
