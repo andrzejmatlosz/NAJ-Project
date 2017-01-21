@@ -13,7 +13,7 @@ var header_component_1 = require("./header/header.component");
 var about_component_1 = require("./about/about.component");
 var router_1 = require("@angular/router");
 var routes = [
-    { path: '', redirectTo: 'about', pathMatch: 'full' },
+    { path: '', redirectTo: 'list', pathMatch: 'full' },
     { path: 'list', loadChildren: 'app/movieList/movie.module#MovieModule' },
     { path: 'about', component: about_component_1.AboutComponent }
 ];

@@ -11,7 +11,7 @@ import { MovieListComponent } from './movieList/movieList.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'about', pathMatch: 'full' },
+    { path: '', redirectTo: 'list', pathMatch: 'full' },
     { path: 'list', loadChildren: 'app/movieList/movie.module#MovieModule' },
     { path: 'about', component: AboutComponent }
 ];
